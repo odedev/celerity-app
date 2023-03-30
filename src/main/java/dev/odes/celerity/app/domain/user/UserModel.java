@@ -1,4 +1,4 @@
-package dev.odes.celerity.app.user;
+package dev.odes.celerity.app.domain.user;
 
 import dev.odes.celerity.app.core.Model;
 

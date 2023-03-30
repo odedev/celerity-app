@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    html {
+      width: 100%;
+      height: 100%;
+      font-size: 16px;
+    }
+    body {
+      width: 100%;
+      height: 100%;
+      font-size: 14px;
+      line-height: 22px;
+    }
+    #root {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      --header-height: 48px;
+      width: 100%;
+      height: var(--header-height);
+      padding: 0 16px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: var(--header-height);
+      font-size: 16px;
+      line-height: 1.5;
+      color: #ffffff;
+      background-color: #13c2c2;
+    }
+    .footer {
+      --footer-height: 24px;
+      /* height: 20px; */
+      height: var(--footer-height);
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: var(--footer-height);
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 12px;
+      line-height: 12px;
+      padding: 0 8px;
+      background-color: #efdbff;
+    }
+    #app {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+    }
+    .menu {
+      --menu-width: 208px;
+      width: var(--menu-width);
+      height: 100%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: var(--menu-width);
+      padding: 16px;
+    }
+
+    .aside {
+      width: 20px;
+      height: 20px;
+      height: 100%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 20px;
+      line-height: 20px;
+      font-size: 12px;
+      background-color: #ffd6e7;
+      writing-mode: vertical-lr;
+    }
+    .main {
+      width: 100%;
+      height: 100%;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .nav {
+      height: 40px;
+      height: 32px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 32px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0 16px;
+      border-left: 1px solid #f0f0f0;
+    }
+    .view {
+      background-color: #f5f5f5;
+      height: 100%;
+      width: 100%;
+      padding: 16px;
+    }
+
+    .page {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+      background-color: #FFFFFF;
+    }
+
+    .page-head {
+      height: 48px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 48px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: flex-end;
+      border-bottom: 1px solid #f0f0f0;
+
+    }
+    .page-body {
+      height: 100%;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
+      overflow: auto;
+      padding: 20px 0;
+
+    }
+    .page-foot {
+      height: 48px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 48px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items:flex-start;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    button {
+      display: inline-block;
+      height: 32px;
+      padding: 0 12px;
+      margin-left: 8px;
+    }
+    button:first-child {
+      margin-left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <header class="header">
+      <div>Header</div>
+      <div>Name</div>
+    </header>
+    <div id="app" class="app">
+      <menu class="menu">Menu</menu>
+      <main class="main">
+        <nav class="nav">Nav > nav1 > nav2</nav>
+        <div class="view">
+          <div class="page">
+            <div class="page-head">
+              <button>列表</button>
+              <button>保存</button>
+            </div>
+            <div class="page-body">
+              <section>
+                <div>
+                  ### 以`rem` 为单位时 html 标签的 `font-size` 最小值
+                  * Chrome 的最小值为 `0px`
+                  * Android webview 的最小值为`8px`
+
+                  ### 元素 `font-size` 的最小值
+                  * Chrome 的最小值为 `12px`
+                </div>
+              </section>
+              <section>
+                <h3>
+                  <div>标题</div>
+                  <div>setting</div>
+                </h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>name</th>
+                      <th>code</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>姓名</td>
+                      <td>编码</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+
+                  </tfoot>
+                </table>
+              </section>
+
+              <section>
+                <table>
+                  <caption>表格标题</caption>
+                  <thead>
+                    <tr>
+                      <th>name</th>
+                      <th>code</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>姓名</td>
+                      <td>编码</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+
+                  </tfoot>
+                </table>
+              </section>
+            </div>
+            <div class="page-foot">
+              <button>构建</button>
+              <button>部署</button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <aside class="aside">
+        aside 右侧功能栏
+      </aside>
+    </div>
+    <footer class="footer">Footer</footer>
+  </div>
+</body>
+</html>
