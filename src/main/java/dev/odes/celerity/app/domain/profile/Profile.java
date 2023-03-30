@@ -1,9 +1,13 @@
 package dev.odes.celerity.app.domain.profile;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
 
+@Entity
 public class Profile {
 
+  @Id
   private String id;
 
   @NotNull(message = "Username 不能为空")

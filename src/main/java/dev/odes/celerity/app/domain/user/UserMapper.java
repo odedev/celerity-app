@@ -10,6 +10,6 @@ import org.apache.ibatis.annotations.Mapper;
  * description:
  */
 
-@Mapper
+
 public class UserMapper {
 }

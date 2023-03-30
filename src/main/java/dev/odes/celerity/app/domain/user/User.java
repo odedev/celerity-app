@@ -2,11 +2,19 @@ package dev.odes.celerity.app.domain.user;
 
 import dev.odes.celerity.app.core.AbstractEntity;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 public class User extends AbstractEntity {
+
+  @Id
   private String id;
+
+  @NotBlank
   private String username;
+
+  @NotBlank
   private String password;
 
   public String getId() {

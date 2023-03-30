@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service("dev.odes.demo.user.UserService")
+@Service
 public class ProfileService {
   private final ProfileRepository profileRepository;
 

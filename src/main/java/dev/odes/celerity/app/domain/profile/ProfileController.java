@@ -3,7 +3,7 @@ package dev.odes.celerity.app.domain.profile;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/profile")
 public class ProfileController {
   private final ProfileService profileService;
   public ProfileController(ProfileService profileService) {

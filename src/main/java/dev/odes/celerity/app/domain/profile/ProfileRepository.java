@@ -7,12 +7,12 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 
-@Repository("dev.odes.celerity.app.domain.profile.ProfileRepository")
+@Repository
 public class ProfileRepository extends AbstractRepository<ProfileModel, ProfilePersistence> {
 
   private final ProfilePersistence profilePersistence;
 
-  public ProfileRepository(ProfileMapper profilePersistence) {
+  public ProfileRepository(ProfilePersistence profilePersistence) {
     super(profilePersistence);
     this.profilePersistence = profilePersistence;
   }
