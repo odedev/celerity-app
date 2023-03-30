@@ -2,10 +2,14 @@ package dev.odes.celerity.app.core;
 
 import java.util.List;
 
-public interface Repository<T, P extends Persistence> {
+public interface Repository<T> {
 
-  T findById(String id);
+  public T findById(String id);
 
-  List<T> findById(Iterable<String> ids);
+  public List<T> findById(Iterable<String> ids);
+
+  public List<T> find();
+
+  public T insert(T t);
 
 }
