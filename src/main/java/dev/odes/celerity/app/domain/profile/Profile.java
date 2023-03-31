@@ -1,11 +1,12 @@
 package dev.odes.celerity.app.domain.profile;
 
+import dev.odes.celerity.app.core.AbstractEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
 
 @Entity
-public class Profile {
+public class Profile extends AbstractEntity {
 
   @Id
   private String id;
