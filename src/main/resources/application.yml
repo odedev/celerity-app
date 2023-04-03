@@ -2,6 +2,9 @@ server:
   port: 23328
 
 spring:
+  name: CelerityApp
+  profiles:
+    active: dev
   main:
     allow-bean-definition-overriding: true
   datasource:

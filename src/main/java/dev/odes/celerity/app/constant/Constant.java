@@ -8,6 +8,11 @@ public class Constant {
   public static final String ENCODING_UTF8 = "UTF-8";
 
   /**
+   * 模板字符编码
+   */
+  public static final String TEMPLATE_ENCODING = "UTF-8";
+
+  /**
    * 时区
    */
   // 世界协调时间

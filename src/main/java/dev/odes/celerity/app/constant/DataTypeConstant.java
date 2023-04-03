@@ -3,22 +3,24 @@ package dev.odes.celerity.app.constant;
 
 public class DataTypeConstant {
 
-  public static final String Data_Type_boolean = "boolean";
+  public static final String DATA_TYPE_BOOLEAN = "Boolean";
 
-  public static final String Data_Type_Integer = "Integer";
+  public static final String DATA_TYPE_INTEGER = "Integer";
 
-  public static final String Data_Type_float = "float";
+  public static final String DATA_TYPE_FLOAT = "Float";
 
-  public static final String Data_Type_String = "String";
+  public static final String DATA_TYPE_STRING = "String";
 
-  public static final String Data_Type_Text = "Text";
+  public static final String DATA_TYPE_TEXT = "Text";
 
-  public static final String Data_Type_Date = "Date";
+  public static final String DATA_TYPE_DATE = "Date";
 
-  public static final String Data_Type_JSON = "JSON";
+  public static final String DATA_TYPE_JSON = "JSON";
 
-  public static final String Data_Type_enum = "enum";
+  public static final String DATA_TYPE_FILE = "File";
 
-  public static final String Data_Type_Entity = "Entity";
+  public static final String DATA_TYPE_ENUM = "Enum";
+
+  public static final String DATA_TYPE_ENTITY = "Entity";
 
 }
