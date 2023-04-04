@@ -13,12 +13,12 @@ public class UserRepository extends AbstractRepository<UserModel, UserPersistenc
   }
 
   @Override
-  public List<UserModel> find() {
+  public List<UserModel> findMany() {
     return null;
   }
 
   @Override
-  public UserModel insert(UserModel userModel) {
-    return null;
+  public void insertOne(UserModel userModel) {
+
   }
 }

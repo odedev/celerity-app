@@ -4,12 +4,16 @@ import java.util.List;
 
 public interface Repository<T> {
 
-  public T findById(String id);
+  public List<T> findMany();
 
-  public List<T> findById(Iterable<String> ids);
+  public T findOne(String condition);
 
-  public List<T> find();
+  public List<T> findManyById(Iterable<String> ids);
 
-  public T insert(T t);
+  public T findOneById(String id);
+
+  public void insertOne(T t);
+
+  public void insertMany(Iterable<T> list);
 
 }

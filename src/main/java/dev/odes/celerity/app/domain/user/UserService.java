@@ -17,7 +17,7 @@ public class UserService {
     List<String> ids = new ArrayList<>();
     ids.add("");
 
-    List<UserModel> userList = this.userRepository.findById(ids);
+    List<UserModel> userList = this.userRepository.findManyById(ids);
 
     User user = new User();
     return userList;

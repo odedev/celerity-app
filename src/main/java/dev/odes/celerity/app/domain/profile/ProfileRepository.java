@@ -18,13 +18,13 @@ public class ProfileRepository extends AbstractRepository<ProfileModel, ProfileP
   }
 
   public List<ProfileModel> find() {
-    List<ProfileModel> profiles = this.profilePersistence.find();
+    List<ProfileModel> profiles = this.profilePersistence.findMany();
     return profiles;
   }
 
   @Override
-  public ProfileModel insert(ProfileModel profileModel) {
-    return null;
+  public void insertOne(ProfileModel profileModel) {
+
   }
 
 }

@@ -10,23 +10,35 @@ public abstract class AbstractRepository<T extends Model, P extends Persistence<
 
   public void setDefaultValue(T t) {
     t.setDefaultValue();
-
   }
 
   @Override
-  public T insert(T t) {
-    this.setDefaultValue(t);
-    this.persistence.insertOne(t);
-    return t;
-  }
-
-  @Override
-  public T findById(String id) {
+  public List<T> findMany() {
     return null;
   }
 
   @Override
-  public List<T> findById(Iterable<String> ids) {
+  public T findOne(String id) {
     return null;
+  }
+
+  @Override
+  public T findOneById(String id) {
+    return null;
+  }
+
+  @Override
+  public List<T> findManyById(Iterable<String> ids) {
+    return null;
+  }
+
+  @Override
+  public void insertOne(T t) {
+
+  }
+
+  @Override
+  public void insertMany(Iterable<T> list) {
+
   }
 }

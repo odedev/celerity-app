@@ -17,7 +17,7 @@ public class ProfileService {
   }
 
   public ProfileModel insert(ProfileModel profile) {
-    ProfileModel profile1 = this.profileRepository.insert(profile);
-    return profile1;
+    this.profileRepository.insertOne(profile);
+    return profile;
   }
 }

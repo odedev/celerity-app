@@ -4,11 +4,12 @@ import java.util.List;
 
 public interface Persistence<T> {
 
-  public List<T> find();
-
   public T findOne();
+
+  public List<T> findMany();
 
   public void insertOne(T t);
 
   public void insert(T t);
+
 }

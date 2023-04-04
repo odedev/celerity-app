@@ -9,6 +9,7 @@ import jakarta.validation.constraints.NotBlank;
 public class User extends AbstractEntity {
 
   @Id
+  @NotBlank
   private String id;
 
   @NotBlank
