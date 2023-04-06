@@ -30,7 +30,7 @@ public class TemplateUtils {
     Map<String, String> templateMap = new HashMap<>();
     templateMap.put("test.txt", getVMPath("test.vm"));
 
-//    templateMap.put(".java", getVMPath("entity.java.vm"));
+    templateMap.put(".java", getVMPath("entity.java.vm"));
 //    templateMap.put("Model.java", getVMPath("model.java.vm"));
 //    templateMap.put("Persistence.java", getVMPath("persistence.java.vm"));
 //    templateMap.put("Mapper.java", getVMPath("mapper.java.vm"));
@@ -46,8 +46,8 @@ public class TemplateUtils {
     return TEMPLATE_DIR + File.separator + fileName;
   }
 
-  public static String getFilePath(String fileName) {
-    return ROOT_PATH + File.separator + DOMAIN_PATH + File.separator + fileName;
+  public static String getFilePath(String entityCode, String fileName) {
+    return ROOT_PATH + File.separator + DOMAIN_PATH + File.separator + entityCode.toLowerCase() + File.separator + entityCode + fileName;
   }
 
 }

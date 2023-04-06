@@ -11,15 +11,4 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/home")
 public class HomeController {
 
-  @GetMapping("/gen")
-  public Object gen() {
-    EntityContext entityContext = new EntityContext();
-    entityContext.setField("testttttt");
-    TemplateContext templateContext = new TemplateContext();
-    templateContext.setEntityContext(entityContext);
-    CodeGenerator codeGenerator = new CodeGenerator(templateContext);
-    codeGenerator.generate();
-
-    return "gen";
-  }
 }

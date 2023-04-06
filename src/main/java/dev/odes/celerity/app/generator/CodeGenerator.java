@@ -26,17 +26,18 @@ public class CodeGenerator {
     VelocityContext velocityContext = new VelocityContext();
     velocityContext.put("templateContext", this.templateContext);
 
-    Map<String, String> templateMap = TemplateUtils.getTemplateMap();
+    Map<String, String> templateMap = TemplateUtils.TEMPLATES;
     for (Map.Entry<String, String> entry : templateMap.entrySet()) {
       String fileName = entry.getKey();
       String templatePath = entry.getValue();
+      String entityCode = templateContext.getEntityContext().getCode();
 
       StringWriter stringWriter = new StringWriter();
       Template template = Velocity.getTemplate(templatePath, Constant.TEMPLATE_ENCODING);
       template.merge(velocityContext, stringWriter);
       String content = stringWriter.toString();
 
-      String path = TemplateUtils.getFilePath(fileName);
+      String path = TemplateUtils.getFilePath(entityCode, fileName);
 
       try {
         FileUtils.writeStringToFile(new File(path), content, Constant.TEMPLATE_ENCODING);

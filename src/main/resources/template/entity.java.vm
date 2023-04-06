@@ -1,0 +1,6 @@
+package dev.odes.celerity.app.domain.${templateContext.entityContext.code.toLowerCase()};
+
+import dev.odes.celerity.app.core.AbstractEntity;
+
+public class ${templateContext.entityContext.code} extends AbstractEntity {
+}
