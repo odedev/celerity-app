@@ -1,4 +1,4 @@
-package dev.odes.celerity.app.constant;
+package dev.odes.celerity.app.develop.constant;
 
 
 public class DataTypeConstant {
@@ -7,7 +7,13 @@ public class DataTypeConstant {
 
   public static final String DATA_TYPE_INTEGER = "Integer";
 
+  public static final String DATA_TYPE_Long = "Long";
+
   public static final String DATA_TYPE_FLOAT = "Float";
+
+  public static final String DATA_TYPE_Double = "Double";
+
+  public static final String DATA_TYPE_Decimal = "BigDecimal";
 
   public static final String DATA_TYPE_STRING = "String";
 

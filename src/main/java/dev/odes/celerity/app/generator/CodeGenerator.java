@@ -13,20 +13,11 @@ import java.io.StringWriter;
 import java.util.Map;
 
 public class CodeGenerator {
-  private static final String ROOT_PATH = "";
-  private static final String MODULE_PATH = "";
-  private static final String MODULE_DOMAIN_PATH = "";
-  private static final String MODULE_APP_PATH = "";
-  private static final String ROOT_PACKAGE = "dev.odes.celerity.app";
 
   private final TemplateContext templateContext;
 
   public CodeGenerator(TemplateContext templateContext) {
     this.templateContext = templateContext;
-  }
-
-  public String getFilePath() {
-    return "workspace/test.txt";
   }
 
   public void generate() {
@@ -35,16 +26,17 @@ public class CodeGenerator {
     VelocityContext velocityContext = new VelocityContext();
     velocityContext.put("templateContext", this.templateContext);
 
-    Map<String, String> templateMap = TemplateMap.getTemplateMap();
+    Map<String, String> templateMap = TemplateUtils.getTemplateMap();
     for (Map.Entry<String, String> entry : templateMap.entrySet()) {
       String fileName = entry.getKey();
       String templatePath = entry.getValue();
-      StringWriter stringWriter = new StringWriter();
 
+      StringWriter stringWriter = new StringWriter();
       Template template = Velocity.getTemplate(templatePath, Constant.TEMPLATE_ENCODING);
       template.merge(velocityContext, stringWriter);
       String content = stringWriter.toString();
-      String path = getFilePath();
+
+      String path = TemplateUtils.getFilePath(fileName);
 
       try {
         FileUtils.writeStringToFile(new File(path), content, Constant.TEMPLATE_ENCODING);

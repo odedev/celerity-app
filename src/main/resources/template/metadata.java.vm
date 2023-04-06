@@ -1,0 +1,15 @@
+package dev.odes.celerity.app.domain.${templateContext.entityContext.code};
+
+import dev.odes.celerity.app.core.Field;
+
+import java.util.AbstractMap;
+import java.util.HashMap;
+import java.util.Map;
+
+public final class EntityMetadata {
+  public static final String entity = "dev.odes.celerity.app.domain.${templateContext.entityContext.code.toLowerCase()}";
+  public static final String code = "${templateContext.entityContext.code}";
+  public static final String name = "${templateContext.entityContext.name}";
+  public static final String description = "${templateContext.entityContext.description}";
+
+}

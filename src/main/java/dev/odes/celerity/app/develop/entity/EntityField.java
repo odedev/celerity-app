@@ -1,8 +1,7 @@
 package dev.odes.celerity.app.develop.entity;
 
 import dev.odes.celerity.app.core.AbstractEntity;
-import dev.odes.celerity.app.enumeration.PermissionEnum;
-import jakarta.validation.constraints.NotBlank;
+import dev.odes.celerity.app.develop.enumeration.DataTypeEnum;
 
 public class EntityField extends AbstractEntity {
 
@@ -10,25 +9,21 @@ public class EntityField extends AbstractEntity {
    * 主键ID
    * type: uuid
    */
-  @NotBlank
   private String id;
 
   /**
    * 实体ID
    */
-  @NotBlank
   private String entity;
 
   /**
    * 编码
    */
-  @NotBlank
   private String code;
 
   /**
    * 名称
    */
-  @NotBlank
   private String name;
 
   /**
@@ -54,16 +49,64 @@ public class EntityField extends AbstractEntity {
    */
   private Boolean isSearchable;
 
+  /**
+   * 是否隐藏
+   * default: false
+   */
   private Boolean isHidden;
+
+  /**
+   * 是否默认显示
+   * default: true
+   */
   private Boolean isDefaultDisplay;
-  private PermissionEnum dataType;
-  private Integer maxLength;
+
+  /**
+   * 是否主键, 只能有一个字段为 true
+   * default: false
+   */
+  private Boolean isPrimaryKey;
+
+  /**
+   * 是否父字段, 只能有一个字段为 true
+   * default: false
+   */
+  private Boolean isParentField;
+
+  /**
+   * 数据类型
+   */
+  private DataTypeEnum dataType;
+
+  /**
+   * 长度
+   * default: 255
+   */
+  private Integer length;
+
+  /**
+   * 默认值
+   */
   private String defaultValue;
+
+  /**
+   * 初始化值
+   */
+  private String initialValue;
+
+  /**
+   * 引用枚举
+   */
   private String referenceEnum;
+
+  /**
+   * 引用实体
+   */
   private String referenceEntity;
+
+  /**
+   * 引用实体字段
+   */
   private String referenceEntityField;
-  private Integer segmentCount;
-
-
 
 }

@@ -7,5 +7,12 @@ public class Entity extends AbstractEntity {
   private String code;
   private String name;
   private String description;
+  private Integer segmentCount;
+
+  /**
+   * 是否可分页
+   * default: true
+   */
+  private Boolean isPageable;
 
 }
