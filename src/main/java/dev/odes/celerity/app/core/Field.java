@@ -1,6 +1,6 @@
 package dev.odes.celerity.app.core;
 
-import dev.odes.celerity.app.develop.enumeration.DataTypeEnum;
+import dev.odes.celerity.app.enumeration.DataTypeEnum;
 
 public class Field {
 

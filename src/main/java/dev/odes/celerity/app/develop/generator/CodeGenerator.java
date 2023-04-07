@@ -1,7 +1,7 @@
-package dev.odes.celerity.app.generator;
+package dev.odes.celerity.app.develop.generator;
 
 import dev.odes.celerity.app.constant.Constant;
-import dev.odes.celerity.app.generator.context.TemplateContext;
+import dev.odes.celerity.app.develop.generator.TemplateContext;
 import org.apache.commons.io.FileUtils;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
@@ -20,17 +20,17 @@ public class CodeGenerator {
     this.templateContext = templateContext;
   }
 
-  public void generate() {
+  public void generate(TemplateContext templateContext) {
 
     VelocityInitializer.init();
     VelocityContext velocityContext = new VelocityContext();
-    velocityContext.put("templateContext", this.templateContext);
+    velocityContext.put("templateContext", templateContext);
 
-    Map<String, String> templateMap = TemplateUtils.TEMPLATES;
+    Map<String, String> templateMap = TemplateUtils.TEMPLATE_FILE;
     for (Map.Entry<String, String> entry : templateMap.entrySet()) {
       String fileName = entry.getKey();
       String templatePath = entry.getValue();
-      String entityCode = templateContext.getEntityContext().getCode();
+      String entityCode = templateContext.getEntity().getCode();
 
       StringWriter stringWriter = new StringWriter();
       Template template = Velocity.getTemplate(templatePath, Constant.TEMPLATE_ENCODING);

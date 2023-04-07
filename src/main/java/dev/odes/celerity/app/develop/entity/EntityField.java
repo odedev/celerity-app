@@ -1,7 +1,7 @@
 package dev.odes.celerity.app.develop.entity;
 
 import dev.odes.celerity.app.core.AbstractEntity;
-import dev.odes.celerity.app.develop.enumeration.DataTypeEnum;
+import dev.odes.celerity.app.enumeration.DataTypeEnum;
 
 public class EntityField extends AbstractEntity {
 

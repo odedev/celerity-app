@@ -1,4 +1,4 @@
-package dev.odes.celerity.app.develop.constant;
+package dev.odes.celerity.app.constant;
 
 
 public class DataTypeConstant {

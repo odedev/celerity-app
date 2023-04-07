@@ -1,4 +1,4 @@
-package dev.odes.celerity.app.generator.context;
+package dev.odes.celerity.app.develop.generator.context;
 
 public class EntityContext {
   private String field;

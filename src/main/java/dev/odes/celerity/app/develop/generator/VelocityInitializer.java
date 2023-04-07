@@ -1,4 +1,4 @@
-package dev.odes.celerity.app.generator;
+package dev.odes.celerity.app.develop.generator;
 
 import dev.odes.celerity.app.constant.Constant;
 import org.apache.velocity.app.Velocity;

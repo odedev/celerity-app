@@ -1,4 +1,8 @@
-package dev.odes.celerity.app.generator.context;
+package dev.odes.celerity.app.develop.generator.context;
+
+import dev.odes.celerity.app.develop.generator.context.EntityContext;
+import dev.odes.celerity.app.develop.generator.context.ModelContext;
+import dev.odes.celerity.app.develop.generator.context.RepositoryContext;
 
 public class TemplateContext {
 

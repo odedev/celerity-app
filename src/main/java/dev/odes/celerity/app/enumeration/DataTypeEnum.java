@@ -1,4 +1,4 @@
-package dev.odes.celerity.app.develop.enumeration;
+package dev.odes.celerity.app.enumeration;
 
 public enum DataTypeEnum {
   BOOLEAN(0, "BOOLEAN"),
