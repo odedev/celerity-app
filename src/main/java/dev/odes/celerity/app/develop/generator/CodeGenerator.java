@@ -14,14 +14,11 @@ import java.util.Map;
 
 public class CodeGenerator {
 
-  private final TemplateContext templateContext;
+  public CodeGenerator() {
 
-  public CodeGenerator(TemplateContext templateContext) {
-    this.templateContext = templateContext;
   }
 
   public void generate(TemplateContext templateContext) {
-
     VelocityInitializer.init();
     VelocityContext velocityContext = new VelocityContext();
     velocityContext.put("templateContext", templateContext);
@@ -44,8 +41,6 @@ public class CodeGenerator {
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
-
-      System.out.println(content);
 
     }
 

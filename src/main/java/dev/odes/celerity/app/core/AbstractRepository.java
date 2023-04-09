@@ -12,6 +12,10 @@ public abstract class AbstractRepository<T extends Model, P extends Persistence<
     t.setDefaultValue();
   }
 
+  public P getPersistence() {
+    return persistence;
+  }
+
   @Override
   public List<T> findMany() {
     return null;
