@@ -1,4 +1,5 @@
-package dev.odes.celerity.app.domain.${templateContext.entityContext.code.toLowerCase()};
+#set($code = $templateContext.entity.code)
+package dev.odes.celerity.app.domain.${code.toLowerCase()};
 
 import dev.odes.celerity.app.core.Field;
 
@@ -6,10 +7,21 @@ import java.util.AbstractMap;
 import java.util.HashMap;
 import java.util.Map;
 
-public final class ${templateContext.entityContext.code}Metadata {
-  public static final String entity = "dev.odes.celerity.app.domain.${templateContext.entityContext.code.toLowerCase()}.${templateContext.entityContext.code}";
-  public static final String code = "${templateContext.entityContext.code}";
-  public static final String name = "${templateContext.entityContext.name}";
-  public static final String description = "${templateContext.entityContext.description}";
+
+public final class ${templateContext.entity.code}Metadata {
+  public static final String entity = "dev.odes.celerity.app.domain.${templateContext.entity.code.toLowerCase()}.${templateContext.entity.code}";
+  public static final String code = "${templateContext.entity.code}";
+  public static final String name = "${templateContext.entity.name}";
+  public static final String description = "${templateContext.entity.description}";
+
+  public static final Map<String, Field> fields = new HashMap<>(
+    Map.ofEntries(
+      #foreach($entityField in $templateContext.entityFields)
+      new AbstractMap.SimpleEntry<>("${entityField.code}", new Field()),
+      #end
+      new AbstractMap.SimpleEntry<>("id", new Field()),
+      new AbstractMap.SimpleEntry<>("age", new Field())
+    )
+  );
 
 }

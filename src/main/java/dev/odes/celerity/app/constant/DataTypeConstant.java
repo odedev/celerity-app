@@ -13,7 +13,7 @@ public class DataTypeConstant {
 
   public static final String DATA_TYPE_Double = "Double";
 
-  public static final String DATA_TYPE_Decimal = "BigDecimal";
+  public static final String DATA_TYPE_Decimal = "Decimal";
 
   public static final String DATA_TYPE_STRING = "String";
 

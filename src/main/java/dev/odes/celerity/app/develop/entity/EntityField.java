@@ -109,4 +109,156 @@ public class EntityField extends AbstractEntity {
    */
   private String referenceEntityField;
 
+
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
+  public String getEntity() {
+    return entity;
+  }
+
+  public void setEntity(String entity) {
+    this.entity = entity;
+  }
+
+  public String getCode() {
+    return code;
+  }
+
+  public void setCode(String code) {
+    this.code = code;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public Boolean getNullable() {
+    return isNullable;
+  }
+
+  public void setNullable(Boolean nullable) {
+    isNullable = nullable;
+  }
+
+  public Boolean getEditable() {
+    return isEditable;
+  }
+
+  public void setEditable(Boolean editable) {
+    isEditable = editable;
+  }
+
+  public Boolean getSearchable() {
+    return isSearchable;
+  }
+
+  public void setSearchable(Boolean searchable) {
+    isSearchable = searchable;
+  }
+
+  public Boolean getHidden() {
+    return isHidden;
+  }
+
+  public void setHidden(Boolean hidden) {
+    isHidden = hidden;
+  }
+
+  public Boolean getDefaultDisplay() {
+    return isDefaultDisplay;
+  }
+
+  public void setDefaultDisplay(Boolean defaultDisplay) {
+    isDefaultDisplay = defaultDisplay;
+  }
+
+  public Boolean getPrimaryKey() {
+    return isPrimaryKey;
+  }
+
+  public void setPrimaryKey(Boolean primaryKey) {
+    isPrimaryKey = primaryKey;
+  }
+
+  public Boolean getParentField() {
+    return isParentField;
+  }
+
+  public void setParentField(Boolean parentField) {
+    isParentField = parentField;
+  }
+
+  public DataTypeEnum getDataType() {
+    return dataType;
+  }
+
+  public void setDataType(DataTypeEnum dataType) {
+    this.dataType = dataType;
+  }
+
+  public Integer getLength() {
+    return length;
+  }
+
+  public void setLength(Integer length) {
+    this.length = length;
+  }
+
+  public String getDefaultValue() {
+    return defaultValue;
+  }
+
+  public void setDefaultValue(String defaultValue) {
+    this.defaultValue = defaultValue;
+  }
+
+  public String getInitialValue() {
+    return initialValue;
+  }
+
+  public void setInitialValue(String initialValue) {
+    this.initialValue = initialValue;
+  }
+
+  public String getReferenceEnum() {
+    return referenceEnum;
+  }
+
+  public void setReferenceEnum(String referenceEnum) {
+    this.referenceEnum = referenceEnum;
+  }
+
+  public String getReferenceEntity() {
+    return referenceEntity;
+  }
+
+  public void setReferenceEntity(String referenceEntity) {
+    this.referenceEntity = referenceEntity;
+  }
+
+  public String getReferenceEntityField() {
+    return referenceEntityField;
+  }
+
+  public void setReferenceEntityField(String referenceEntityField) {
+    this.referenceEntityField = referenceEntityField;
+  }
 }

@@ -13,4 +13,8 @@ public class EntityController {
     this.entityService = entityService;
   }
 
+  public Object get() {
+
+    return "";
+  }
 }

@@ -13,5 +13,5 @@ public interface MapperPersistence<T> extends Persistence<T> {
   void insertOne(T t);
 
   @Override
-  void insert(T t);
+  void insert(Iterable<T> list);
 }

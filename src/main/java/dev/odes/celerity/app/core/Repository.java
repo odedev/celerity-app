@@ -18,13 +18,20 @@ public interface Repository<T> {
 
 
   default void validate() {}
+  default void validate(T t) {}
+  default void validate(Iterable<T> list) {}
+  default void setDefaultValue() {}
+  default void setDefaultValue(T t) {}
+  default void setDefaultValue(Iterable<T> list) {}
   default void beforeFind() {}
   default void found() {}
   default void beforeInsert() {}
   default void inserted() {}
-  default void beforeUpdate() {}
-  default void updated() {}
-  default void beforeDelete() {}
-  default void deleted() {}
+  default void inserted(Iterable<T> list) {}
+
+//  default void beforeUpdate() {}
+//  default void updated() {}
+//  default void beforeDelete() {}
+//  default void deleted() {}
 
 }

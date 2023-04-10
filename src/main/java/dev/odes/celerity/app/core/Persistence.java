@@ -10,6 +10,6 @@ public interface Persistence<T> {
 
   public void insertOne(T t);
 
-  public void insert(T t);
+  public void insert(Iterable<T> list);
 
 }

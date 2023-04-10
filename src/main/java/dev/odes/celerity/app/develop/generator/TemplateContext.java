@@ -3,13 +3,15 @@ package dev.odes.celerity.app.develop.generator;
 import dev.odes.celerity.app.develop.entity.Entity;
 import dev.odes.celerity.app.develop.entity.EntityField;
 
+import java.util.List;
+
 public class TemplateContext {
   private Entity entity;
-  private EntityField entityField;
+  private List<EntityField> entityFields;
 
-  public TemplateContext(Entity entity, EntityField entityField) {
+  public TemplateContext(Entity entity, List<EntityField> entityFields) {
     this.entity = entity;
-    this.entityField = entityField;
+    this.entityFields = entityFields;
   }
 
   public Entity getEntity() {
@@ -20,11 +22,11 @@ public class TemplateContext {
     this.entity = entity;
   }
 
-  public EntityField getEntityField() {
-    return entityField;
+  public List<EntityField> getEntityFields() {
+    return entityFields;
   }
 
-  public void setEntityField(EntityField entityField) {
-    this.entityField = entityField;
+  public void setEntityFields(List<EntityField> entityFields) {
+    this.entityFields = entityFields;
   }
 }
